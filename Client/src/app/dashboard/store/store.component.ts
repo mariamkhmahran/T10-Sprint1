@@ -27,7 +27,7 @@ export class StoreComponent implements OnInit{
 				title: 'Seller',
 				type: 'string'
 			},
-			CreatedAtUpdatedAt: {
+			CreatedAt: {
 				title: 'created at',
 				type: Date,
 				editable: false

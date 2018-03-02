@@ -23,17 +23,17 @@ export class StoreComponent implements OnInit{
 				title: 'Price',
 				type: 'number'
 			},
-			seller: {
+			SellerName: {
 				title: 'Seller',
 				type: 'string'
 			},
-			Created: {
-				title: 'createdAt',
+			CreatedAtUpdatedAt: {
+				title: 'created at',
 				type: Date,
 				editable: false
 			},
-			updated: {
-				title: 'updatedAt',
+			UpdatedAt: {
+				title: 'updated at',
 				type: Date,
 				editable: false
 				

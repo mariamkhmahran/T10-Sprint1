@@ -1,14 +1,17 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeModule } from './@theme/theme.module'; 
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { FormsModule }   from '@angular/forms';
 import { UserService } from './user.service';
+import { StoreService } from './store.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,9 +22,9 @@ import { UserService } from './user.service';
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' },UserService]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' },UserService , StoreService]
 })
 export class AppModule {}
